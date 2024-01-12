@@ -1,14 +1,5 @@
 @extends('backend.layouts.app')
 @section('content')
-<body class="g-sidenav-show   bg-gray-100">
-  <div class="min-height-300 bg-primary position-absolute w-100"></div>
-
-    @include('backend.layouts.sidebar')
-
-  <main class="main-content position-relative border-radius-lg ">
-    <!-- Navbar -->
-    @include('backend.layouts.navbar')
-    <!-- End Navbar -->
     <div class="container-fluid py-4">
       <div class="row">
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -384,5 +375,4 @@
         </div>
       </div>
     </div>
-</main>
 @endsection
