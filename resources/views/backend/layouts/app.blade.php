@@ -17,17 +17,16 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="{{ asset('./assets/css/argon-dashboard.css') }}" rel="stylesheet" />
 </head>
-<body class="g-sidenav-show   bg-gray-100">
-    <div class="min-height-300 bg-primary position-absolute w-100"></div>
+<body class="g-sidenav-show bg-gray-100">
   
       @include('backend.layouts.sidebar')
   
     <main class="main-content position-relative border-radius-lg ">
       <!-- Navbar -->
-      @include('backend.layouts.navbar')
+      {{-- @include('backend.layouts.navbar') --}}
       <!-- End Navbar -->
         @yield('content')
-        <footer class="footer py-3">
+        {{-- <footer class="footer py-3">
             <div class="container-fluid">
               <div class="row align-items-center justify-content-lg-between">
                 <div class="col-lg-6 mb-lg-0 mb-4">
@@ -58,7 +57,7 @@
                 </div>
               </div>
             </div>
-        </footer>
+        </footer> --}}
     </main>
 
   {{-- <div class="fixed-plugin">
