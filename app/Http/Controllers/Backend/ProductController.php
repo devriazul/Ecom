@@ -67,6 +67,9 @@ class ProductController extends Controller
     public function delete($id)
     {
         $product = Product::find($id);
+        if(file_exists('uploads/products/'.$product->photo)){
+            unlink('uploads/products/'.$product->photo);
+        }
         $product->delete();
         return redirect()->route('admin.product');
     }
