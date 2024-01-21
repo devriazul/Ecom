@@ -20,16 +20,15 @@ class ProductController extends Controller
     }
     public function store(Request $request)
     {
-        if($request->file('photo')){
-            $newName = 'product_'.time().('.').$request->file('photo')->getClientOriginalExtension();
+        $newName = 'product_'.time().('.').$request->file('photo')->getClientOriginalExtension();
             $request->photo->move('uploads/products/', $newName);
             $data['photo'] = $newName;
-        }
 
         $data = [
             'name' => $request->input('name'),
             'price' => $request->input('price'),
             'desc' => $request->input('desc'),
+            'photo' => $newName,
         ];
 
         // Data store 
