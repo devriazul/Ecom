@@ -7,7 +7,7 @@
             <a href="{{ route('admin.product') }}" class="btn btn-dark btn-sm mb-3">All Products</a>
         </div>
     </div>
-    <form method="POST" action="{{ route('admin.product.edit', $product->id) }}">
+    <form method="POST" action="{{ route('admin.product.edit', $product->id) }}" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="card shadow p-3 col-md-6">
@@ -22,6 +22,10 @@
                   <div class="mb-3">
                     <label for="desc" class="form-label">Description</label>
                     <textarea class="form-control" name="desc" id="" cols="30" rows="4">{{ $product->desc }}</textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="formFile" class="form-label">Old Photo</label>
+                    <img src="{{ asset('uploads/products/'.$product->photo) }}" class="img-fluid rounded" alt="..." width="150px">
                   </div>
                   <div class="mb-3">
                     <label for="formFile" class="form-label">Product Photo</label>

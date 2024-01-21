@@ -7,7 +7,7 @@
             <a href="{{ route('admin.product') }}" class="btn btn-dark btn-sm mb-3">All Products</a>
         </div>
     </div>
-    <form method="POST" action="{{ route('admin.product.create') }}">
+    <form method="POST" action="{{ route('admin.product.create') }}" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="card shadow p-3 col-md-6">

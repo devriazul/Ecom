@@ -27,7 +27,7 @@
             <td>{{ $product->price }}</td>
             <td>{{ $product->desc }}</td>
             <td>
-              <img src="{{ $product->photo }}" class="img-fluid" alt="...">
+              <img src="{{ asset('uploads/products/'.$product->photo) }}" class="img-fluid rounded" alt="..." width="150px">
             </td>
             <td>
               <a href="{{ route('admin.product.edit',$product->id) }}" class="btn btn-primary btn-sm">Edit</a>
